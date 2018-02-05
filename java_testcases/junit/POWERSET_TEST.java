@@ -13,29 +13,29 @@ public class POWERSET_TEST {
   public void powerset_test1() {
     try {
       Object actual = POWERSET.powerset(new java.util.ArrayList(java.util.Arrays.asList("a","b","c")));
-      assertEquals("[[],[\"c\"],[\"b\"],[\"b\",\"c\"],[\"a\"],[\"a\",\"c\"],[\"a\",\"b\"],[\"a\",\"b\",\"c\"]]",actual.toString() );
+      assertEquals("[[],[\"c\"],[\"b\"],[\"b\",\"c\"],[\"a\"],[\"a\",\"c\"],[\"a\",\"b\"],[\"a\",\"b\",\"c\"]]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
     }
   }
 
-  @Test(timeout = 100)
+  @Test
   public void powerset_test2() {
     try {
       Object actual = POWERSET.powerset(new java.util.ArrayList(java.util.Arrays.asList("a","b")));
-      assertEquals("[[],[\"b\"],[\"a\"],[\"a\",\"b\"]]",actual.toString() );
+      assertEquals("[[],[\"b\"],[\"a\"],[\"a\",\"b\"]]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
     }
   }
 
-  @Test(timeout = 100)
+  @Test
   public void powerset_test3() {
     try {
       Object actual = POWERSET.powerset(new java.util.ArrayList(java.util.Arrays.asList("a")));
-      assertEquals("[[],[\"a\"]]",actual.toString() );
+      assertEquals("[[],[a]]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -46,7 +46,7 @@ public class POWERSET_TEST {
   public void powerset_test4() {
     try {
       Object actual = POWERSET.powerset(new java.util.ArrayList(java.util.Arrays.asList()));
-      assertEquals("[[]]",actual.toString() );
+      assertEquals("[[]]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -57,7 +57,7 @@ public class POWERSET_TEST {
   public void powerset_test5() {
     try {
       Object actual = POWERSET.powerset(new java.util.ArrayList(java.util.Arrays.asList("x","df","z","m")));
-      assertEquals("[[],[\"m\"],[\"z\"],[\"z\",\"m\"],[\"df\"],[\"df\",\"m\"],[\"df\",\"z\"],[\"df\",\"z\",\"m\"],[\"x\"],[\"x\",\"m\"],[\"x\",\"z\"],[\"x\",\"z\",\"m\"],[\"x\",\"df\"],[\"x\",\"df\",\"m\"],[\"x\",\"df\",\"z\"],[\"x\",\"df\",\"z\",\"m\"]]",actual.toString() );
+      assertEquals("[[],[\"m\"],[\"z\"],[\"z\",\"m\"],[\"df\"],[\"df\",\"m\"],[\"df\",\"z\"],[\"df\",\"z\",\"m\"],[\"x\"],[\"x\",\"m\"],[\"x\",\"z\"],[\"x\",\"z\",\"m\"],[\"x\",\"df\"],[\"x\",\"df\",\"m\"],[\"x\",\"df\",\"z\"],[\"x\",\"df\",\"z\",\"m\"]]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;

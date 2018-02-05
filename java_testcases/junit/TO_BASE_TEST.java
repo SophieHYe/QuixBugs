@@ -13,7 +13,7 @@ public class TO_BASE_TEST {
   public void to_base_test1() {
     try {
       Object actual = TO_BASE.to_base((int)31,(int)16);
-      assertEquals("\"1F\"",actual.toString() );
+      assertEquals("1F",actual.toString() );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -24,7 +24,7 @@ public class TO_BASE_TEST {
   public void to_base_test2() {
     try {
       Object actual = TO_BASE.to_base((int)41,(int)2);
-      assertEquals("\"101001\"",actual.toString() );
+      assertEquals("101001",actual.toString() );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -35,7 +35,7 @@ public class TO_BASE_TEST {
   public void to_base_test3() {
     try {
       Object actual = TO_BASE.to_base((int)44,(int)5);
-      assertEquals("\"134\"",actual.toString() );
+      assertEquals("134",actual.toString() );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -46,7 +46,7 @@ public class TO_BASE_TEST {
   public void to_base_test4() {
     try {
       Object actual = TO_BASE.to_base((int)27,(int)23);
-      assertEquals("\"14\"",actual.toString() );
+      assertEquals("14",actual.toString() );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -57,7 +57,7 @@ public class TO_BASE_TEST {
   public void to_base_test5() {
     try {
       Object actual = TO_BASE.to_base((int)56,(int)23);
-      assertEquals("\"2A\"",actual.toString() );
+      assertEquals("2A",actual.toString() );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -68,7 +68,7 @@ public class TO_BASE_TEST {
   public void to_base_test6() {
     try {
       Object actual = TO_BASE.to_base((int)8237,(int)24);
-      assertEquals("\"E75\"",actual.toString() );
+      assertEquals("E75",actual.toString() );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -79,7 +79,7 @@ public class TO_BASE_TEST {
   public void to_base_test7() {
     try {
       Object actual = TO_BASE.to_base((int)8237,(int)34);
-      assertEquals("\"749\"",actual.toString() );
+      assertEquals("749",actual.toString() );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;

@@ -13,7 +13,7 @@ public class SIEVE_TEST {
   public void sieve_test1() {
     try {
       Object actual = SIEVE.sieve((java.lang.Integer)1);
-      assertEquals("[]",actual.toString() );
+      assertEquals("[]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -24,7 +24,7 @@ public class SIEVE_TEST {
   public void sieve_test2() {
     try {
       Object actual = SIEVE.sieve((java.lang.Integer)2);
-      assertEquals("[2]",actual.toString() );
+      assertEquals("[2]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -35,7 +35,7 @@ public class SIEVE_TEST {
   public void sieve_test3() {
     try {
       Object actual = SIEVE.sieve((java.lang.Integer)4);
-      assertEquals("[2,3]",actual.toString() );
+      assertEquals("[2,3]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -46,7 +46,7 @@ public class SIEVE_TEST {
   public void sieve_test4() {
     try {
       Object actual = SIEVE.sieve((java.lang.Integer)7);
-      assertEquals("[2,3,5,7]",actual.toString() );
+      assertEquals("[2,3,5,7]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -57,7 +57,7 @@ public class SIEVE_TEST {
   public void sieve_test5() {
     try {
       Object actual = SIEVE.sieve((java.lang.Integer)20);
-      assertEquals("[2,3,5,7,11,13,17,19]",actual.toString() );
+      assertEquals("[2,3,5,7,11,13,17,19]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -68,7 +68,7 @@ public class SIEVE_TEST {
   public void sieve_test6() {
     try {
       Object actual = SIEVE.sieve((java.lang.Integer)50);
-      assertEquals("[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47]",actual.toString() );
+      assertEquals("[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;

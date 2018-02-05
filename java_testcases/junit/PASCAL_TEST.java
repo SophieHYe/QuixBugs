@@ -13,7 +13,7 @@ public class PASCAL_TEST {
   public void pascal_test1() {
     try {
       Object actual = PASCAL.pascal((int)1);
-      assertEquals("[1]",actual.toString() );
+      assertEquals("[[1]]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -24,7 +24,7 @@ public class PASCAL_TEST {
   public void pascal_test2() {
     try {
       Object actual = PASCAL.pascal((int)2);
-      assertEquals("[[1],[1,1]]",actual.toString() );
+      assertEquals("[[1],[1,1]]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -35,7 +35,7 @@ public class PASCAL_TEST {
   public void pascal_test3() {
     try {
       Object actual = PASCAL.pascal((int)3);
-      assertEquals("[[1],[1,1],[1,2,1]]",actual.toString() );
+      assertEquals("[[1],[1,1],[1,2,1]]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -46,7 +46,7 @@ public class PASCAL_TEST {
   public void pascal_test4() {
     try {
       Object actual = PASCAL.pascal((int)4);
-      assertEquals("[[1],[1,1],[1,2,1],[1,3,3,1]]",actual.toString() );
+      assertEquals("[[1],[1,1],[1,2,1],[1,3,3,1]]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -57,7 +57,7 @@ public class PASCAL_TEST {
   public void pascal_test5() {
     try {
       Object actual = PASCAL.pascal((int)5);
-      assertEquals("[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]",actual.toString() );
+      assertEquals("[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;

@@ -13,7 +13,7 @@ public class NEXT_PERMUTATION_TEST {
   public void next_permutation_test1() {
     try {
       Object actual = NEXT_PERMUTATION.next_permutation(new java.util.ArrayList(java.util.Arrays.asList(3,2,4,1)));
-      assertEquals("[3,4,1,2]",actual.toString() );
+      assertEquals("[3,4,1,2]",actual.toString().replaceAll(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -24,7 +24,7 @@ public class NEXT_PERMUTATION_TEST {
   public void next_permutation_test2() {
     try {
       Object actual = NEXT_PERMUTATION.next_permutation(new java.util.ArrayList(java.util.Arrays.asList(3,5,6,2,1)));
-      assertEquals("[3,6,1,2,5]",actual.toString() );
+      assertEquals("[3,6,1,2,5]",actual.toString().replaceAll(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -35,7 +35,7 @@ public class NEXT_PERMUTATION_TEST {
   public void next_permutation_test3() {
     try {
       Object actual = NEXT_PERMUTATION.next_permutation(new java.util.ArrayList(java.util.Arrays.asList(3,5,6,2)));
-      assertEquals("[3,6,2,5]",actual.toString() );
+      assertEquals("[3,6,2,5]",actual.toString().replaceAll(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -46,7 +46,7 @@ public class NEXT_PERMUTATION_TEST {
   public void next_permutation_test4() {
     try {
       Object actual = NEXT_PERMUTATION.next_permutation(new java.util.ArrayList(java.util.Arrays.asList(4,5,1,7,9)));
-      assertEquals("[4,5,1,9,7]",actual.toString() );
+      assertEquals("[4,5,1,9,7]",actual.toString().replaceAll(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -57,7 +57,7 @@ public class NEXT_PERMUTATION_TEST {
   public void next_permutation_test5() {
     try {
       Object actual = NEXT_PERMUTATION.next_permutation(new java.util.ArrayList(java.util.Arrays.asList(4,5,8,7,1)));
-      assertEquals("[4,7,1,5,8]",actual.toString() );
+      assertEquals("[4,7,1,5,8]",actual.toString().replaceAll(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -68,7 +68,7 @@ public class NEXT_PERMUTATION_TEST {
   public void next_permutation_test6() {
     try {
       Object actual = NEXT_PERMUTATION.next_permutation(new java.util.ArrayList(java.util.Arrays.asList(9,5,2,6,1)));
-      assertEquals("[9,5,6,1,2]",actual.toString() );
+      assertEquals("[9,5,6,1,2]",actual.toString().replaceAll(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -79,7 +79,7 @@ public class NEXT_PERMUTATION_TEST {
   public void next_permutation_test7() {
     try {
       Object actual = NEXT_PERMUTATION.next_permutation(new java.util.ArrayList(java.util.Arrays.asList(44,5,1,7,9)));
-      assertEquals("[44,5,1,9,7]",actual.toString() );
+      assertEquals("[44,5,1,9,7]",actual.toString().replaceAll(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -90,7 +90,7 @@ public class NEXT_PERMUTATION_TEST {
   public void next_permutation_test8() {
     try {
       Object actual = NEXT_PERMUTATION.next_permutation(new java.util.ArrayList(java.util.Arrays.asList(3,4,5)));
-      assertEquals("[3,5,4]",actual.toString() );
+      assertEquals("[3,5,4]",actual.toString().replaceAll(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;

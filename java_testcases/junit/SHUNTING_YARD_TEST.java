@@ -2,7 +2,7 @@ package java_testcases.junit;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import java_programs.SHUNTING_YARD;
+import correct_java_programs.SHUNTING_YARD;
 import com.google.gson.JsonParser;
 
 public class SHUNTING_YARD_TEST {
@@ -13,7 +13,7 @@ public class SHUNTING_YARD_TEST {
   public void shunting_yard_test1() {
     try {
       Object actual = SHUNTING_YARD.shunting_yard(new java.util.ArrayList(java.util.Arrays.asList(10,"-",5,"-",2)));
-      assertEquals("[10,5,\"-\",2,\"-\"]",actual.toString() );
+      assertEquals("[10,5,-,2,-]",actual.toString().replace(" ", "") );
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -24,7 +24,7 @@ public class SHUNTING_YARD_TEST {
   public void shunting_yard_test2() {
     try {
       Object actual = SHUNTING_YARD.shunting_yard(new java.util.ArrayList(java.util.Arrays.asList(34,"-",12,"/",5)));
-      assertEquals("[34,12,5,\"/\",\"-\"]",actual.toString() );
+      assertEquals("[34,12,5,/,-]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -35,7 +35,7 @@ public class SHUNTING_YARD_TEST {
   public void shunting_yard_test3() {
     try {
       Object actual = SHUNTING_YARD.shunting_yard(new java.util.ArrayList(java.util.Arrays.asList(4,"+",9,"*",9,"-",10,"+",13)));
-      assertEquals("[4,9,9,\"*\",\"+\",10,\"-\",13,\"+\"]",actual.toString() );
+      assertEquals("[4,9,9,*,+,10,-,13,+]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -46,7 +46,7 @@ public class SHUNTING_YARD_TEST {
   public void shunting_yard_test4() {
     try {
       Object actual = SHUNTING_YARD.shunting_yard(new java.util.ArrayList(java.util.Arrays.asList(7,"*",43,"-",7,"+",13,"/",7)));
-      assertEquals("[7,43,\"*\",7,\"-\",13,7,\"/\",\"+\"]",actual.toString() );
+      assertEquals("[7,43,*,7,-,13,7,/,+]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
