@@ -2,7 +2,7 @@ package java_testcases.junit;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import java_programs.GET_FACTORS;
+import correct_java_programs.GET_FACTORS;
 import com.google.gson.JsonParser;
 
 public class GET_FACTORS_TEST {
@@ -13,7 +13,7 @@ public class GET_FACTORS_TEST {
   public void get_factors_test1() {
     try {
       Object actual = GET_FACTORS.get_factors((int)1);
-      assertEquals("[]",actual.toString() );
+      assertEquals("[]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -24,7 +24,7 @@ public class GET_FACTORS_TEST {
   public void get_factors_test2() {
     try {
       Object actual = GET_FACTORS.get_factors((int)100);
-      assertEquals("[2,2,5,5]",actual.toString() );
+      assertEquals("[2,2,5,5]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -35,7 +35,7 @@ public class GET_FACTORS_TEST {
   public void get_factors_test3() {
     try {
       Object actual = GET_FACTORS.get_factors((int)101);
-      assertEquals("[101]",actual.toString() );
+      assertEquals("[101]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -46,7 +46,7 @@ public class GET_FACTORS_TEST {
   public void get_factors_test4() {
     try {
       Object actual = GET_FACTORS.get_factors((int)104);
-      assertEquals("[2,2,2,13]",actual.toString() );
+      assertEquals("[2,2,2,13]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -57,7 +57,7 @@ public class GET_FACTORS_TEST {
   public void get_factors_test5() {
     try {
       Object actual = GET_FACTORS.get_factors((int)2);
-      assertEquals("[2]",actual.toString() );
+      assertEquals("[2]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -68,7 +68,7 @@ public class GET_FACTORS_TEST {
   public void get_factors_test6() {
     try {
       Object actual = GET_FACTORS.get_factors((int)3);
-      assertEquals("[3]",actual.toString() );
+      assertEquals("[3]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -79,7 +79,7 @@ public class GET_FACTORS_TEST {
   public void get_factors_test7() {
     try {
       Object actual = GET_FACTORS.get_factors((int)17);
-      assertEquals("[17]",actual.toString() );
+      assertEquals("[17]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -90,7 +90,7 @@ public class GET_FACTORS_TEST {
   public void get_factors_test8() {
     try {
       Object actual = GET_FACTORS.get_factors((int)63);
-      assertEquals("[3,3,7]",actual.toString() );
+      assertEquals("[3,3,7]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -101,7 +101,7 @@ public class GET_FACTORS_TEST {
   public void get_factors_test9() {
     try {
       Object actual = GET_FACTORS.get_factors((int)74);
-      assertEquals("[2,37]",actual.toString() );
+      assertEquals("[2,37]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -112,7 +112,7 @@ public class GET_FACTORS_TEST {
   public void get_factors_test10() {
     try {
       Object actual = GET_FACTORS.get_factors((int)73);
-      assertEquals("[73]",actual.toString() );
+      assertEquals("[73]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;
@@ -123,7 +123,7 @@ public class GET_FACTORS_TEST {
   public void get_factors_test11() {
     try {
       Object actual = GET_FACTORS.get_factors((int)9837);
-      assertEquals("[3,3,1093]",actual.toString() );
+      assertEquals("[3,3,1093]",actual.toString().replace(" ", ""));
     }
     catch(IllegalArgumentException e) {
       throw new IllegalArgumentException("Arguments are illegal!") ;

@@ -2,7 +2,7 @@ package java_testcases.junit;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import correct_java_programs.SHUNTING_YARD;
+import java_programs.SHUNTING_YARD;
 import com.google.gson.JsonParser;
 
 public class SHUNTING_YARD_TEST {

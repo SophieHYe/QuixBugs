@@ -2,7 +2,7 @@ package java_testcases.junit;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import correct_java_programs.POSSIBLE_CHANGE;
+import java_programs.POSSIBLE_CHANGE;
 import com.google.gson.JsonParser;
 
 public class POSSIBLE_CHANGE_TEST {

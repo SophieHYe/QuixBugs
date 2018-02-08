@@ -2,7 +2,7 @@ package java_testcases.junit;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import java_programs.LCS_LENGTH;
+import correct_java_programs.LCS_LENGTH;
 import com.google.gson.JsonParser;
 
 public class LCS_LENGTH_TEST {

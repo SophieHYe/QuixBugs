@@ -26,53 +26,53 @@ public class TOPOLOGICAL_ORDERING_TEST {
 		Node nine = new Node("9");
 		Node ten = new Node("10");
 		
-		ArrayList arr5 = new ArrayList<Node>();
+		ArrayList<Node>arr5 = new ArrayList<Node>();
 		arr5.add(eleven);
 		five.setSuccessors(arr5);
 		
-		ArrayList arr7 = new ArrayList<Node>();
+		ArrayList<Node>arr7 = new ArrayList<Node>();
 		arr7.add(eleven);
 		arr7.add(eight);
 		seven.setSuccessors(arr7);
 		
-		ArrayList arr3 = new ArrayList<Node>();
+		ArrayList<Node>arr3 = new ArrayList<Node>();
 		arr3.add(eight);
 		arr3.add(ten);
 		three.setSuccessors(arr3);
 		
-		ArrayList arr11 = new ArrayList<Node>();
+		ArrayList<Node>arr11 = new ArrayList<Node>();
 		arr11.add(five);
 		arr11.add(seven);
 		eleven.setPredecessors(arr11);
 		
 		
-		ArrayList arrout11 = new ArrayList<Node>();
+		ArrayList<Node>arrout11 = new ArrayList<Node>();
 		arrout11.add(two);
 		arrout11.add(nine);
 		arrout11.add(ten);
 		eleven.setSuccessors(arrout11);
 		
-		ArrayList in8 = new ArrayList<Node>();
+		ArrayList<Node>in8 = new ArrayList<Node>();
 		in8.add(seven);
 		in8.add(three);
 		eight.setPredecessors(in8);
 		
 		
-		ArrayList out8 = new ArrayList<Node>();
+		ArrayList<Node>out8 = new ArrayList<Node>();
 		out8.add(nine);
 		eight.setSuccessors(out8);
 		
 		
-		ArrayList in2 = new ArrayList<Node>();
+		ArrayList<Node>in2 = new ArrayList<Node>();
 		in2.add(eleven);
 		two.setPredecessors(in2);
 		
-		ArrayList in9 = new ArrayList<Node>();
+		ArrayList<Node>in9 = new ArrayList<Node>();
 		in9.add(eleven);
 		in9.add(eight);
 		nine.setPredecessors(in9);
 		
-		ArrayList in10 = new ArrayList<Node>();
+		ArrayList<Node>in10 = new ArrayList<Node>();
 		in10.add(eleven);
 		in10.add(three);
 		ten.setPredecessors(in10);
@@ -92,7 +92,6 @@ public class TOPOLOGICAL_ORDERING_TEST {
 		String resultStr="";
 		for(Node node : results) {
 			resultStr += node.getValue()+" ";
-			System.out.println(resultStr);
 		}		
 		 assertEquals("5 7 3 11 8 10 2 9 ",resultStr );
 		
@@ -113,45 +112,45 @@ public class TOPOLOGICAL_ORDERING_TEST {
 		Node two = new Node("2");	
 		Node three = new Node("3");
 		
-		ArrayList arr5 = new ArrayList<Node>();
+		ArrayList<Node>arr5 = new ArrayList<Node>();
 		arr5.add(two);
-		arr5.add(three);
+		arr5.add(zero);
 		five.setSuccessors(arr5);
 		
-		ArrayList arr4 = new ArrayList<Node>();
+		ArrayList<Node>arr4 = new ArrayList<Node>();
 		arr4.add(zero);
 		arr4.add(one);
 		four.setSuccessors(arr4);
 		
 		
 		
-		ArrayList arr2 = new ArrayList<Node>();
+		ArrayList<Node>arr2 = new ArrayList<Node>();
 		arr2.add(five);
 		two.setPredecessors(arr2);
 		
 		
-		ArrayList arrout2 = new ArrayList<Node>();
+		ArrayList<Node>arrout2 = new ArrayList<Node>();
 		arrout2.add(three);
 		two.setSuccessors(arrout2);
 		
-		ArrayList in0 = new ArrayList<Node>();
+		ArrayList<Node>in0 = new ArrayList<Node>();
 		in0.add(five);
 		in0.add(four);
 		zero.setPredecessors(in0);
 		
 		
-		ArrayList in1 = new ArrayList<Node>();
+		ArrayList<Node>in1 = new ArrayList<Node>();
 		in1.add(four);
 		in1.add(three);
 		one.setPredecessors(in1);
 		
 	
 		
-		ArrayList in3 = new ArrayList<Node>();
+		ArrayList<Node>in3 = new ArrayList<Node>();
 		in3.add(two);
 		three.setPredecessors(in3);
 		
-		ArrayList out3 = new ArrayList<Node>();
+		ArrayList<Node>out3 = new ArrayList<Node>();
 		out3.add(one);
 		three.setSuccessors(out3);
 		

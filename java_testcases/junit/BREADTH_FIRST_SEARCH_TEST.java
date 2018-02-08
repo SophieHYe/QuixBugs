@@ -6,14 +6,15 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import correct_java_programs.DEPTH_FIRST_SEARCH;
+import java_programs.BREADTH_FIRST_SEARCH;
 import java_programs.Node;
 
-public class DEPTH_FIRST_SEARCH_TEST {
+public class BREADTH_FIRST_SEARCH_TEST {
 
 	/**
 	 * Case 1: Strongly connected graph Output: Path found!
 	 */
+
 	@Test
 	public void test1() {
 		ArrayList<Node> empty = new ArrayList<Node>();
@@ -43,7 +44,7 @@ public class DEPTH_FIRST_SEARCH_TEST {
 		stationArr5.add(station4);
 		Node station6 = new Node("Tottenham Court Road", empty, stationArr5);
 
-		Boolean result = DEPTH_FIRST_SEARCH.depth_first_search(station6, station1);
+		Boolean result = BREADTH_FIRST_SEARCH.breadth_first_search(station6, station1);
 		String resultStr = "";
 		if (result) {
 			resultStr = "Path found!";
@@ -76,10 +77,9 @@ public class DEPTH_FIRST_SEARCH_TEST {
 		arrd.add(nodeb);
 		arrd.add(nodec);
 		arrd.add(noded);
-
 		Node nodea = new Node("A", empty, arrd);
 
-		Boolean result = DEPTH_FIRST_SEARCH.depth_first_search(nodea, nodee);
+		Boolean result = BREADTH_FIRST_SEARCH.breadth_first_search(nodea, nodee);
 		String resultStr = "";
 		if (result) {
 			resultStr = "Path found!";
@@ -90,11 +90,10 @@ public class DEPTH_FIRST_SEARCH_TEST {
 	}
 
 	/**
-	 * Case 3: Two unconnected nodes in graph Output: Path not found
+	 * Case 3: Two unconnected nodes in graph Output: Path not found!
 	 */
 	@Test
 	public void test3() {
-
 		ArrayList<Node> empty = new ArrayList<Node>();
 		Node nodef = new Node("F");
 		Node nodee = new Node("E");
@@ -114,7 +113,7 @@ public class DEPTH_FIRST_SEARCH_TEST {
 
 		Node nodea = new Node("A", empty, arrd);
 
-		Boolean result = DEPTH_FIRST_SEARCH.depth_first_search(nodef, nodee);
+		Boolean result = BREADTH_FIRST_SEARCH.breadth_first_search(nodef, nodee);
 		String resultStr = "";
 		if (result) {
 			resultStr = "Path found!";
@@ -122,35 +121,17 @@ public class DEPTH_FIRST_SEARCH_TEST {
 			resultStr = "Path not found!";
 		}
 		assertEquals("Path not found!", resultStr);
-
 	}
 
 	/**
-	 * Case 4: One node graph Output: Path found
+	 * Case 4: One node graph Output: Path found!
 	 */
 	@Test
 	public void test4() {
-
 		ArrayList<Node> empty = new ArrayList<Node>();
 		Node nodef = new Node("F");
-		Node nodee = new Node("E");
-		Node noded = new Node("D");
 
-		ArrayList<Node> arrf = new ArrayList<Node>();
-		arrf.add(nodef);
-		Node nodec = new Node("C", empty, arrf);
-		ArrayList<Node> arre = new ArrayList<Node>();
-		arre.add(nodee);
-		Node nodeb = new Node("B", empty, arre);
-
-		ArrayList<Node> arrd = new ArrayList<Node>();
-		arrd.add(nodeb);
-		arrd.add(nodec);
-		arrd.add(noded);
-
-		Node nodea = new Node("A", empty, arrd);
-
-		Boolean result = DEPTH_FIRST_SEARCH.depth_first_search(nodef, nodef);
+		Boolean result = BREADTH_FIRST_SEARCH.breadth_first_search(nodef, nodef);
 		String resultStr = "";
 		if (result) {
 			resultStr = "Path found!";
@@ -158,38 +139,35 @@ public class DEPTH_FIRST_SEARCH_TEST {
 			resultStr = "Path not found!";
 		}
 		assertEquals("Path found!", resultStr);
-
 	}
 
 	/**
-	 * Case 5: Graph with cycles Output: Path not found
+	 * Case 5: Graph with cycles Output: Path found!
 	 */
+
 	@Test
 	public void test5() {
-
 		ArrayList<Node> empty = new ArrayList<Node>();
-		Node nodef = new Node("F");
-		Node nodee = new Node("E");
-		Node noded = new Node("D");
+		Node node1 = new Node("1");
+		Node node2 = new Node("2");
+		Node node3 = new Node("3");
+		ArrayList<Node> arr1 = new ArrayList<Node>();
+		arr1.add(node1);
+		Node node4 = new Node("4", empty, arr1);
+		ArrayList<Node> arr2 = new ArrayList<Node>();
+		arr1.add(node2);
+		Node node5 = new Node("5", empty, arr2);
+		ArrayList<Node> arr3 = new ArrayList<Node>();
+		arr3.add(node5);
+		arr3.add(node4);
+		arr3.add(node3);
+		Node node6 = new Node("6", empty, arr3);
 
-		ArrayList<Node> arrf = new ArrayList<Node>();
-		arrf.add(nodef);
-		Node nodec = new Node("C", empty, arrf);
-		ArrayList<Node> arre = new ArrayList<Node>();
-		arre.add(nodee);
-		Node nodeb = new Node("B", empty, arre);
+		ArrayList<Node> arr4 = new ArrayList<Node>();
+		arr4.add(node6);
+		node2.setSuccessors(arr4);
 
-		ArrayList<Node> arrd = new ArrayList<Node>();
-		arrd.add(nodeb);
-		arrd.add(nodec);
-		arrd.add(noded);
-		Node nodea = new Node("A", empty, arrd);
-
-		ArrayList<Node> arra = new ArrayList<Node>();
-		arra.add(nodea);
-		nodee.setSuccessors(arra);
-
-		Boolean result = DEPTH_FIRST_SEARCH.depth_first_search(nodea, nodef);
+		Boolean result = BREADTH_FIRST_SEARCH.breadth_first_search(node6, node1);
 		String resultStr = "";
 		if (result) {
 			resultStr = "Path found!";
@@ -197,7 +175,6 @@ public class DEPTH_FIRST_SEARCH_TEST {
 			resultStr = "Path not found!";
 		}
 		assertEquals("Path found!", resultStr);
-
 	}
 
 }

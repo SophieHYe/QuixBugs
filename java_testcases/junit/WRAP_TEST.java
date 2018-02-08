@@ -2,7 +2,7 @@ package java_testcases.junit;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import java_programs.WRAP;
+import correct_java_programs.WRAP;
 import com.google.gson.JsonParser;
 
 public class WRAP_TEST {

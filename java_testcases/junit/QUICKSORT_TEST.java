@@ -2,7 +2,7 @@ package java_testcases.junit;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import correct_java_programs.QUICKSORT;
+import java_programs.QUICKSORT;
 import com.google.gson.JsonParser;
 
 public class QUICKSORT_TEST {

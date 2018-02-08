@@ -16,7 +16,7 @@ public class TOPOLOGICAL_ORDERING {
         for (int i = 0; i < listSize; i++) {
             Node node = orderedNodes.get(i);
             for (Node nextNode : node.getSuccessors()) {
-                if (orderedNodes.containsAll(nextNode.getSuccessors()) && !orderedNodes.contains(nextNode)) {
+                if (orderedNodes.containsAll(nextNode.getPredecessors()) && !orderedNodes.contains(nextNode)) {
                     orderedNodes.add(nextNode);
                     listSize++;
                 }
