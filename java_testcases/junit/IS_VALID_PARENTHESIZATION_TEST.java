@@ -2,7 +2,7 @@ package java_testcases.junit;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import correct_java_programs.IS_VALID_PARENTHESIZATION;
+import java_programs.IS_VALID_PARENTHESIZATION;
 import com.google.gson.JsonParser;
 
 public class IS_VALID_PARENTHESIZATION_TEST {

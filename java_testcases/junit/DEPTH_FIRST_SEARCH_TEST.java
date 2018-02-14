@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import correct_java_programs.DEPTH_FIRST_SEARCH;
+import java_programs.DEPTH_FIRST_SEARCH;
 import java_programs.Node;
 
 public class DEPTH_FIRST_SEARCH_TEST {

@@ -10,7 +10,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import correct_java_programs.SHORTEST_PATH_LENGTHS;
+import java_programs.SHORTEST_PATH_LENGTHS;
 import java_programs.Node;
 
 public class SHORTEST_PATH_LENGTHS_TEST {

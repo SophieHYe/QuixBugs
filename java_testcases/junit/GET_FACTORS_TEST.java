@@ -2,7 +2,7 @@ package java_testcases.junit;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import correct_java_programs.GET_FACTORS;
+import java_programs.GET_FACTORS;
 import com.google.gson.JsonParser;
 
 public class GET_FACTORS_TEST {

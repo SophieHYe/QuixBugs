@@ -2,7 +2,7 @@ package java_testcases.junit;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import correct_java_programs.RPN_EVAL;
+import java_programs.RPN_EVAL;
 import com.google.gson.JsonParser;
 
 public class RPN_EVAL_TEST {
